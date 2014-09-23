@@ -1,1 +1,5 @@
-pip install django==1.7
+pip install flask
+pip install flask-script
+pip install WTForms
+pip install mongoengine
+pip install flask_mongoengine

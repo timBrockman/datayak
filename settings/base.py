@@ -11,7 +11,31 @@ SECRET_KEY = '*!e64e35-g(yoh4ofynn!=v^qe#dq93ira)c8$z3e!)xg*5pob'
 
 DEBUG = True
 
+DATABASES = {
+   'default' : {
+      'ENGINE' : 'django_mongodb_engine',
+      'NAME' : 'datayak',
+   }
+}
+
+
+######################## TEMPLATES #######################
 TEMPLATE_DEBUG = True
+
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+#     'django.template.loaders.eggs.Loader',
+)
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.request',
+    'django.contrib.auth.context_processors.auth',
+)
+TEMPLATE_DIRS = (
+    #always use absolute URLs
+    os.path.join(os.path.dirname(__file__),'../templates').replace('\\','/'),    
+)
+
 
 ALLOWED_HOSTS = []
 
@@ -38,13 +62,6 @@ ROOT_URLCONF = 'datayak.urls'
 
 WSGI_APPLICATION = 'datayak.wsgi.application'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -55,4 +72,18 @@ USE_L10N = True
 
 USE_TZ = True
 
+######################## STATIC #######################
+STATIC_ROOT = '/var/www/datayak/static/'
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(os.path.dirname(__file__),'../static').replace('\\','/'),    
+)
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+)
+
+######################## MEDIA #######################
+MEDIA_ROOT = '/var/www/datayak/media/'
+MEDIA_URL = '/media/'

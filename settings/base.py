@@ -15,10 +15,13 @@ DATABASES = {
    'default' : {
       'ENGINE' : 'django_mongodb_engine',
       'NAME' : 'datayak',
+      'USER': '',  
+      'PASSWORD': '',  
+      'HOST': 'localhost',  
+      'PORT': '27017',  
    }
 }
-
-
+ 
 ######################## TEMPLATES #######################
 TEMPLATE_DEBUG = True
 

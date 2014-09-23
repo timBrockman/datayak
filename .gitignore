@@ -1,0 +1,14 @@
+#virtualenv directory
+env/
+
+# note directories and such
+_devnotes/
+
+#binaries
+*.pyc
+
+# hidden dirs and files
+.settings/
+.project
+.pydevproject
+

@@ -1,0 +1,60 @@
+REQUEST URL
+https://api.meetup.com/orlandodata?&sign=true&photo-host=public&page=20
+
+HTTP/1.1 200 success
+{
+"id": 6378212,
+"name": "Orlando Data Science",
+"link": "http://www.meetup.com/orlandodata/",
+"urlname": "orlandodata",
+"description": "<p>Orlando Data Science is a professional organization that provides learning and networking opportunities for those involved in, or interested in, the field of data science. Our goal is bring together professionals from the entrepreneurship, academic, and corporate communities to share ideas and bring worldwide recognition to the Orlando tech community.</p>
+<p>We invite well-established experts in the field of data science to speak every month. These events are free and open to the public, and held at Envy Labs - the entrepreneurship and collaboration hub of Orlando.</p>",
+"created": 1356713548000,
+"city": "Orlando",
+"country": "US",
+"state": "FL",
+"join_mode": "open",
+"visibility": "public",
+"lat": 28.56999969482422,
+"lon": -81.4000015258789,
+"members": 309,
+"who": "Data Fans",
+"group_photo": {
+"id": 352686302,
+"highres_link": "http://photos4.meetupstatic.com/photos/event/1/8/9/e/highres_352686302.jpeg",
+"photo_link": "http://photos2.meetupstatic.com/photos/event/1/8/9/e/600_352686302.jpeg",
+"thumb_link": "http://photos2.meetupstatic.com/photos/event/1/8/9/e/thumb_352686302.jpeg"
+},
+"timezone": "US/Eastern",
+"category": {
+"id": 34,
+"name": "Tech",
+"shortname": "Tech"
+},
+"photos": [
+{
+"id": 328747232,
+"highres_link": "http://photos4.meetupstatic.com/photos/event/1/c/4/0/highres_328747232.jpeg",
+"photo_link": "http://photos2.meetupstatic.com/photos/event/1/c/4/0/600_328747232.jpeg",
+"thumb_link": "http://photos4.meetupstatic.com/photos/event/1/c/4/0/thumb_328747232.jpeg"
+},
+{
+"id": 328748332,
+"highres_link": "http://photos3.meetupstatic.com/photos/event/2/0/8/c/highres_328748332.jpeg",
+"photo_link": "http://photos3.meetupstatic.com/photos/event/2/0/8/c/600_328748332.jpeg",
+"thumb_link": "http://photos3.meetupstatic.com/photos/event/2/0/8/c/thumb_328748332.jpeg"
+},
+{
+"id": 369041502,
+"highres_link": "http://photos3.meetupstatic.com/photos/event/a/2/1/e/highres_369041502.jpeg",
+"photo_link": "http://photos3.meetupstatic.com/photos/event/a/2/1/e/600_369041502.jpeg",
+"thumb_link": "http://photos3.meetupstatic.com/photos/event/a/2/1/e/thumb_369041502.jpeg"
+},
+{
+"id": 369241122,
+"highres_link": "http://photos1.meetupstatic.com/photos/event/4/6/2/highres_369241122.jpeg",
+"photo_link": "http://photos1.meetupstatic.com/photos/event/4/6/2/600_369241122.jpeg",
+"thumb_link": "http://photos1.meetupstatic.com/photos/event/4/6/2/thumb_369241122.jpeg"
+}
+]
+}

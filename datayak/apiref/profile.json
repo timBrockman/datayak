@@ -1,0 +1,44 @@
+REQUEST URL:
+https://api.meetup.com/2/profiles?&sign=true&photo-host=public&member_id=self&page=20
+
+HTTP/1.1 200 success
+{
+"results": [
+{
+"profile_url": "http://www.meetup.com/orlando-node-js/members/65799682/",
+"status": "active",
+"photo_url": "http://photos2.meetupstatic.com/photos/member/5/b/2/e/member_76943342.jpeg",
+"answers": [
+{
+"answer": "No...will likely do so in the near future.",
+"question": "Do you use Node.js in production?",
+"question_id": 3110452
+},
+{
+"question": "If so, in what form?",
+"question_id": 3110442
+}
+],
+"photo": {
+"photo_link": "http://photos2.meetupstatic.com/photos/member/5/b/2/e/member_76943342.jpeg",
+"highres_link": "http://photos2.meetupstatic.com/photos/member/5/b/2/e/highres_76943342.jpeg",
+"thumb_link": "http://photos4.meetupstatic.com/photos/member/5/b/2/e/thumb_76943342.jpeg",
+"photo_id": 76943342
+},
+"member_id": 65799682,
+"visited": 1394991526000,
+"bio": "Started a legal technology and jury consulting company. Would like to learn more about node for data analysis applications.",
+"created": 1371521246000,
+"updated": 1372443955000,
+"name": "Scott",
+"group": {
+"id": 6033212,
+"created": 1354126854000,
+"group_lat": 28.510000228881836,
+"name": "Orlando Node.js User Group",
+"group_lon": -81.36000061035156,
+"join_mode": "open",
+"urlname": "orlando-node-js",
+"who": "Event Emitters"
+},
+"other_services": { }

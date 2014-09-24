@@ -1,7 +1,15 @@
 from flask import Flask
+from config import *
+from pymongo import MongoClient
 
-app = Flask(__name__)
-app.config["SECRET_KEY"] = "8585143a612fb2b28f308bc334fa978c10cf6ab1"
+def connect_db():
+    c = MongoClient(DATABASE['HOST'],DATABASE['PORT'])
+    c = c.DATABASE['NAME']
+    
+    return c
 
-if __name__ == '__main__':
-	app.run()
+def create_app(config_name):
+    app = Flask(__name__)
+    app.config.from_object(config[config_name])
+    
+

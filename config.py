@@ -9,7 +9,7 @@ class LocalConfig(Config):
     
     #MONGO SETTINGS
     MONGO_DBNAME='datayak'
-    MONGO_HOST='locahost'
+    MONGO_HOST='localhost'
     MONGO_PORT='27017'
     
    

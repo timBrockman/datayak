@@ -1,5 +1,5 @@
 from flask import Flask
-from config import *
+from config import config
 from .models import mongo
 
 def create_app(config_name):

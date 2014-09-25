@@ -6,13 +6,12 @@ class Config(object):
     
 class LocalConfig(Config):
     DEBUG = True
-    DATABASE = {
-              NAME:'datayak',
-              USERNAME:'theyak',
-              PASSWORD:'',
-              HOST:'locahost',
-              PORT:':27017',
-              }
+    
+    #MONGO SETTINGS
+    MONGO_DBNAME='datayak',
+    MONGO_HOST='locahost',
+    MONGO_PORT='27017',
+    
    
 config = {
           'local': LocalConfig,

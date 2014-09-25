@@ -8,9 +8,9 @@ class LocalConfig(Config):
     DEBUG = True
     
     #MONGO SETTINGS
-    MONGO_DBNAME='datayak',
-    MONGO_HOST='locahost',
-    MONGO_PORT='27017',
+    MONGO_DBNAME='datayak'
+    MONGO_HOST='locahost'
+    MONGO_PORT='27017'
     
    
 config = {

@@ -17,8 +17,13 @@ def upsert_yak():
               'sign':'true',
               'member_id':app.config['MEMBER_ID'],
               }
-
-    r = requests.get(url,params=params)
+    
+    # Make the API Request
+    data = requests.get(url,params=params)
+    
+    #convert JSON response to python dictionary
+    data = json.loads(data)
+    
         
     datayak = {
                'name':name,

@@ -1,15 +1,26 @@
 # datayak utils
 from flask.ext.pymongo import PyMongo
-from datayak import mongo
+from datayak import app, mongo
 import bson, requests, json
-from config import config
 
-def create_yak(name, email, password, api_key):
+def upsert_yak():
+    """
+    Creates the Yak document if it doesn't exist. 
+    Or, Updates the existing Yak document to remain current with
+    his groups
+    """
+
+    url = 'https://api.meetup.com/2/profiles.json'
     
-    groups = ''
+    params = {
+              'key':app.config['API_KEY'],
+              'sign':'true',
+              'member_id':app.config['MEMBER_ID'],
+              }
+
+    r = requests.get(url,params=params)
         
     datayak = {
-               _id: bson.ObjectId(),
                'name':name,
                'email':email,
                'password':password,

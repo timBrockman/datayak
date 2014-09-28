@@ -1,8 +1,6 @@
 from flask.ext.pymongo import PyMongo
 from datayak import mongo
 
-
-
 class Yak(object):
     """
     The Yak Model represents a collection in mongo, which contains the Yak's data 
@@ -10,3 +8,4 @@ class Yak(object):
     """
     
     # create dictionary keys for a Yak document
+    def create(self, **dict ):

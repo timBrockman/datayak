@@ -9,8 +9,8 @@ def upsert_yak():
     Or, Updates the existing Yak document to remain current with
     his groups
     """
-
-    url = 'https://api.meetup.com/2/profiles.json'
+    
+    url = 'https://api.meetup.com/2/groups.json'
     
     params = {
               'key':app.config['API_KEY'],
@@ -22,8 +22,7 @@ def upsert_yak():
     data = requests.get(url,params=params)
     
     #convert JSON response to python dictionary
-    data = json.loads(data)
-    
+    data = data.json()
         
     datayak = {
                'name':name,

@@ -1,5 +1,5 @@
 from flask.ext.pymongo import PyMongo
-from datayak import db
+from datayak import app, mongo
 import requests, json
 
 class Groups(object):
@@ -9,7 +9,7 @@ class Groups(object):
     """
     
     # create dictionary keys for a Yak document
-    def find_groups():
+    def find_groups(*args, **kwargs):
         """
         Perform raw_text search for groups containing technology in title, category, or description
         """
@@ -31,7 +31,7 @@ class Groups(object):
         
         # Save each group contained in the response as a Mongo document
         for item in response:
-            db.groups.insert(item)
+            mongo.db.groups.insert(item)
             
         print 'completed'
         

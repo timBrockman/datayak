@@ -34,3 +34,5 @@ class Yak(object):
             db.groups.insert(item)
             
         print 'completed'
+        
+        return response

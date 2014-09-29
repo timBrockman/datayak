@@ -12,8 +12,7 @@ class Groups(object):
     def find_groups(*args, **kwargs):
         """
         Perform raw_text search for groups containing technology in title, category, or description
-        """
-        
+        """        
         # create API query
         url = 'https://api.meetup.com/find/groups'
         params = {
@@ -25,7 +24,6 @@ class Groups(object):
                   'radius':'30', 
                   'page':'999',
                   }
-
         
         # Make the API Request, transform response to native Python Types
         response = requests.get(url,params=params).json()

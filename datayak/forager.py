@@ -15,14 +15,16 @@ class Groups(object):
         """        
         # create API query
         url = 'https://api.meetup.com/find/groups'
+        # only params specifies the fields we want        
+        only = 'category,city,created,description,id,organizer,topics,name,members'
         params = {
                   'sign':'true', 
                   'key':app.config['API_KEY'], 
-                  'member_id':app.config['MEMBER_ID'], 
                   'text':'technology',
                   'zip':'32801', 
                   'radius':'30', 
                   'page':'999',
+                  'only':only
                   }
         
         # Make the API Request, transform response to native Python Types

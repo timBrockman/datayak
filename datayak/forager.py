@@ -37,10 +37,10 @@ class Groups(object):
         for group in response:        
             #check if the group exists in our db. If so, skip it
             doc = mongo.db.groups.find_one({'id':group['id']})
-            if group['id'] == doc['id']:
-                pass
-            else:
+            if not doc:
                 groups.append(group)
+            else:
+                pass
         
         #bulk insert to mongodb if list is not empty
         if groups:

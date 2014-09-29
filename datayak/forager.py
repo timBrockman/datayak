@@ -2,7 +2,7 @@ from flask.ext.pymongo import PyMongo
 from datayak import db
 import requests, json
 
-class Yak(object):
+class Groups(object):
     """
     The Yak Model represents a collection in mongo, which contains the Yak's data 
     including the groups he belongs to and his data.

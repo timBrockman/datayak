@@ -30,8 +30,11 @@ class Groups(object):
         response = requests.get(url,params=params).json()
         
         # Save each group contained in the response as a Mongo document
-        for item in response:
-            mongo.db.groups.insert(item)
+        for group in response:
+            if mongo.db.groups.find({'id':{'$exists': False}}):
+                mongo.db.groups.insert(item)
+            else:
+                pass 
             
         print 'completed'
         

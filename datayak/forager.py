@@ -45,6 +45,8 @@ class Groups(object):
         #bulk insert to mongodb if list is not empty
         if groups:
             mongo.db.groups.insert(groups)
+        else:
+            print 'List is empty. No additional groups found'
                      
         print 'completed'
         

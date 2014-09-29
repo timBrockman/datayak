@@ -14,6 +14,7 @@ class Groups(object):
         Perform raw_text search for groups containing technology in title, category, or description
         """
         
+        # create API query
         url = 'https://api.meetup.com/find/groups'
         params = {
                   'sign':'true', 
@@ -29,13 +30,22 @@ class Groups(object):
         # Make the API Request, transform response to native Python Types
         response = requests.get(url,params=params).json()
         
-        # Save each group contained in the response as a Mongo document
-        for group in response:
-            if mongo.db.groups.find({'id':{'$exists': False}}):
-                mongo.db.groups.insert(item)
+        #create empty list
+        groups = []
+        
+        # ensure each group is unique, and add to the list        
+        for group in response:        
+            #check if the group exists in our db. If so, skip it
+            doc = mongo.db.groups.find_one({'id':group['id']})
+            if group['id'] == doc['id']:
+                pass
             else:
-                pass 
-            
+                groups.append(group)
+        
+        #bulk insert to mongodb if list is not empty
+        if groups:
+            mongo.db.groups.insert(groups)
+                     
         print 'completed'
         
         return response

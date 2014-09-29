@@ -6,5 +6,6 @@ app = Flask(__name__)
 app.config.from_object(config['local'])
 # Flask-PyMongo Automatically Reads from Config to establish connections
 mongo = PyMongo(app)
+
 from .views import yak
 app.register_blueprint(yak)
